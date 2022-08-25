@@ -1,0 +1,5 @@
+Name=Gustavo
+Lastname=GustavoLastname
+Information=male
+FavouriteActress=Scarlett
+FavouriteGame=Wing Commander
