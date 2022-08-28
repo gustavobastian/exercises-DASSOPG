@@ -3,23 +3,25 @@
 from math import pi,sqrt
 import os 
 
-os.system('clear')
-nombre = input("Ingrese su Nombre: ")
-os.system('clear')
-print("Bienvenido "+nombre)
-input("PRESIONA CUALQUIER COSA PARA CONTINUAR")
+
 response = 1
 
 def perim_area_rectangle(width, height):
-        print("Perim="+str(2*width+2*height))
-        print("Area="+str(width*height))
+        perim=2*width+2*height
+        area=width*height
+        print("Perim="+str(round(perim,2)))
+        print("Area="+str(round(area,2)))
+
 
 def perim_area_circle(radius):
-    print("Perim="+str(2*pi*radius))
-    print("Area="+str(pi*radius*radius))
+    perim=(2*pi*radius)
+    area=pi*radius*radius
+    print("Perim="+str(round(perim,2)))
+    print("Area="+str(round(area,2)))
 
 def volume_esphere(radius):
-    print("Volume="+str(radius*radius*radius*pi*4/3))
+    volume=radius*radius*radius*pi*4/3
+    print("Volume="+str(round(volume,2)))
 
 def area_rectangle(x1,x2,y1,y2):
     width_local=abs(x2-x1)
@@ -28,10 +30,10 @@ def area_rectangle(x1,x2,y1,y2):
 
 def hipotenuse(cat1,cat2):
     hipo=sqrt(cat1*cat1+cat2*cat2)
-    print("hipotenuse:"+str(sqrt))
+    print("hipotenuse:"+str(round(hipo,2)))
 
 while response != 0 :
-    os.system('clear')
+    os.system('clear')    
     print("*************************************************")
     print("*Que desea hacer:                               *")
     print("*0: Salir                                       *")
@@ -47,36 +49,36 @@ while response != 0 :
     elif response==1:
         os.system('clear')
         print("calculando area de rectangulo")
-        numero1=int(input("Ingresa base: "))
-        numero2=int(input("Ingresa altura: "))
+        numero1=float(input("Ingresa base: "))
+        numero2=float(input("Ingresa altura: "))
         perim_area_rectangle(numero1,numero2)
         input("PRESIONA CUALQUIER COSA PARA CONTINUAR")
     elif response==2:
         os.system('clear')
         print("calculando area de circulo")
-        numero1=int(input("Ingresa radio: "))        
+        numero1=float(input("Ingresa radio: "))        
         perim_area_circle(numero1)
         input("PRESIONA CUALQUIER COSA PARA CONTINUAR")    
     elif response==3:
         os.system('clear')
         print("calculando volumen de esfera")
-        numero1=int(input("Ingresa radio: "))        
+        numero1=float(input("Ingresa radio: "))        
         volume_esphere(numero1)
         input("PRESIONA CUALQUIER COSA PARA CONTINUAR")        
     elif response==4:
         os.system('clear')
         print("calculando area de rectangulo por coordenadas")
-        numero1=int(input("Ingresa x1: "))
-        numero2=int(input("Ingresa x2: "))
-        numero3=int(input("Ingresa y1: "))
-        numero4=int(input("Ingresa y2: "))
+        numero1=float(input("Ingresa x1: "))
+        numero2=float(input("Ingresa x2: "))
+        numero3=float(input("Ingresa y1: "))
+        numero4=float(input("Ingresa y2: "))
         area_rectangle(numero1,numero2,numero3,numero4)
         input("PRESIONA CUALQUIER COSA PARA CONTINUAR")    
     elif response==5:
         os.system('clear')
         print("calculando hipotenusa")
-        numero1=int(input("Ingresa Cateto1: "))
-        numero2=int(input("Ingresa Cateto2: "))        
+        numero1=float(input("Ingresa Cateto1: "))
+        numero2=float(input("Ingresa Cateto2: "))        
         hipotenuse(numero1,numero2)
         input("PRESIONA CUALQUIER COSA PARA CONTINUAR")        
     else : input("PRESIONA CUALQUIER COSA PARA CONTINUAR")   

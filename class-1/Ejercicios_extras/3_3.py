@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# Printing domino 
+# 
 from math import pi,sqrt,pow
 import os
 from turtle import st 
