@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# some function that works with days
+# some function that returns the year in roman numeral
 from math import pi,sqrt,pow
 import os
 
@@ -59,6 +59,7 @@ def romanAge(x):
 
 number=1
 while (number!=0) :
+    os.system('clear')
     number=int(input("Input year:"))
     if(number==0):exit(0)
     romanAge(number)
