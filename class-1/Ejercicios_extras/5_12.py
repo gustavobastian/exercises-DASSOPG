@@ -19,10 +19,11 @@ def resolvedEx(x,number_of_exercises,percent):
         return "approved"
     else: return "dissaproved"
 
-data=1
+
 number_of_exercises=int(input("ejercicios:"))        
 percent=int(input("porcentaje(1...100):")) 
 
+data=1
 while data != "q":
     os.system('clear')      
     digit=int(input("ejercicios resueltos:"))        

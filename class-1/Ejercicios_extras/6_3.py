@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# primes numbers
+# characters
 
 from math import pi,sqrt,pow
 from operator import truediv
