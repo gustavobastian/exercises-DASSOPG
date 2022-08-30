@@ -67,5 +67,5 @@ while number != '0' :
     os.system('clear')
     data=input("Write your birthdate(dd/mm):")
     signOf(data)
-    print("presione enter for repeat (0 exits)")
+    print("press enter for repeat (0 exits)")
     number=(input(">"))
