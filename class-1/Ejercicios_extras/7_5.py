@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# 2D vectors
+# some list
 
 from cmath import atan
 from math import atan2, pi,sqrt,pow,cos
@@ -10,8 +10,6 @@ import os
 
 list=[1,2,3,4,5,6,7]
 #list=[1,1,1,1,1,1,1]
-
-
 
 tableFactorial = [1,1]
 
