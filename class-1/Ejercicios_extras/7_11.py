@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# paragraphs
+# functions in functions
 
 from cmath import atan
 from math import atan2, pi,sqrt,pow,cos
@@ -36,16 +36,21 @@ def filter(x, fun):
             continue    
     return output
 
-data=1
 
-while data != "q":
-    x=0
-    os.system('clear')      
-    print("original:"+str(d))
-    print("mapped:"+str(map(d,fun1)))
 
-    print("original:"+str(d))
-    print("filtered >5:"+str(filter(d,fun2)))
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+##testing
+
+if __name__ == "__main__":
+        data=1
+
+        while data != "q":
+            x=0
+            os.system('clear')      
+            print("original:"+str(d))
+            print("mapped:"+str(map(d,fun1)))
+
+            print("original:"+str(d))
+            print("filtered >5:"+str(filter(d,fun2)))
+            
+            print("\n want to repeat?(enter q to exit)")
+            data= (input(">"))

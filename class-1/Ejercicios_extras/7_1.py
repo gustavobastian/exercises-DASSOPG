@@ -20,23 +20,24 @@ def isSorted(x):
         else: continue
     return True
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    #caractA=(input("Number in binary:"))            
-    
-    print(isSorted(tupleEl))
-    print(isSorted(tupleEl2))
-    print(isSorted(tupleEl3))
-    print(isSorted(tupleEl4))
-    print(isSorted(tupleEl5))
-    print(isSorted(tupleEl6))
-    
-    #print(convertBinary(str(caractA)))
-    
-    
-    
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        #caractA=(input("Number in binary:"))            
+        
+        print(isSorted(tupleEl))
+        print(isSorted(tupleEl2))
+        print(isSorted(tupleEl3))
+        print(isSorted(tupleEl4))
+        print(isSorted(tupleEl5))
+        print(isSorted(tupleEl6))
+        
+        #print(convertBinary(str(caractA)))
+        
+        
+        
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

@@ -43,24 +43,25 @@ def canUse(x,y):
         return True
     else :return False
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    primerFicha=str(input("First token (ej 1,2):"))            
-    segundaFicha=str(input("Second token (ej 1,2):"))            
-    
-    print(convertStr2Tup2(primerFicha))
-    print(convertStr2Tup2(segundaFicha))
-    
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        primerFicha=str(input("First token (ej 1,2):"))            
+        segundaFicha=str(input("Second token (ej 1,2):"))            
+        
+        print(convertStr2Tup2(primerFicha))
+        print(convertStr2Tup2(segundaFicha))
+        
 
-    print(canUse(primerFicha,segundaFicha))
-    
-    
-    #print(convertBinary(str(caractA)))
-    
-    
-    
+        print(canUse(primerFicha,segundaFicha))
+        
+        
+        #print(convertBinary(str(caractA)))
+        
+        
+        
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

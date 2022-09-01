@@ -54,29 +54,29 @@ def printE2Bis(x,origen, cant):
         else: 
             print("Estimada "+str(x[i][0])+",vote por mi")    
 
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+    # primerFicha=str(input("First token (ej 1,2):"))            
+    # segundaFicha=str(input("Second token (ej 1,2):"))            
+        
+    # print(convertStr2Tup2(primerFicha))
+    # print(convertStr2Tup2(segundaFicha))
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-   # primerFicha=str(input("First token (ej 1,2):"))            
-   # segundaFicha=str(input("Second token (ej 1,2):"))            
-    
-   # print(convertStr2Tup2(primerFicha))
-   # print(convertStr2Tup2(segundaFicha))
+    # print(canUse(primerFicha,segundaFicha))
+        
+        
+        #print(convertBinary(str(caractA)))
+        printE(x)
+        print("********************************")
+        printE2(x,3,2)
+        print("********************************")
+        printEBis(xx)
+        print("********************************")
+        printE2Bis(xx,3,2)
+        print("********************************")
 
-   # print(canUse(primerFicha,segundaFicha))
-    
-    
-    #print(convertBinary(str(caractA)))
-    printE(x)
-    print("********************************")
-    printE2(x,3,2)
-    print("********************************")
-    printEBis(xx)
-    print("********************************")
-    printE2Bis(xx,3,2)
-    print("********************************")
-
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

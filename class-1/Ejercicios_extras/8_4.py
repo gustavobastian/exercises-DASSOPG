@@ -51,17 +51,18 @@ def printTicket(ticket,priceList):
 testing
 """
 
+if __name__ == "__main__":
 
-data=1
-while data != "q":
-    x=0
-    os.system('clear')      
-    
-    
-    print("Printing ticket:")
-    
-    printTicket(listaF,lista)
-    
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+    data=1
+    while data != "q":
+        x=0
+        os.system('clear')      
+        
+        
+        print("Printing ticket:")
+        
+        printTicket(listaF,lista)
+        
+        
+        print("\n want to repeat?(enter q to exit)")
+        data= (input(">"))

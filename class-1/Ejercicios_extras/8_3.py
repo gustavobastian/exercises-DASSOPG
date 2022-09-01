@@ -12,8 +12,7 @@ import os
 
 lista=[("Gomes,Pedro",123123),("Gamis,Jorge",53452345),("Alvarez, Done",9999999),("Filosa, Juliana",12311233),("Albertengo, Jorge",13213213)]
 
-##testing
-data=1
+
 ##from ex 6.7
 def isSubs(carA, carS):
     d=len(carA)-len(carS)    
@@ -31,18 +30,25 @@ def find(list,value):
     
     return output
 
-while data != "q":
-    x=0
-    os.system('clear')      
-    print("Ingrese parte del nombre")
-    value=input(">")
+
+##testing
+
+if __name__ == "__main__":
+    
+        data=1    
+
+        while data != "q":
+            x=0
+            os.system('clear')      
+            print("Ingrese parte del nombre")
+            value=input(">")
 
 
-    
-    print("looking for i:"+str(find(lista,value)))
-    
-    
-    
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+            
+            print("looking for i:"+str(find(lista,value)))
+            
+            
+            
+            
+            print("\n want to repeat?(enter q to exit)")
+            data= (input(">"))

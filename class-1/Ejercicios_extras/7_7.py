@@ -27,12 +27,16 @@ def fun(data):
     return list    
     
 
-data=1
-while data != "q":
-    os.system('clear')      
+##testing
 
-        
-    print(fun(list))
-    
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+if __name__ == "__main__":
+
+        data=1
+        while data != "q":
+            os.system('clear')      
+
+                
+            print(fun(list))
+            
+            print("want to repeat?(enter q to exit)")
+            data= (input(">"))

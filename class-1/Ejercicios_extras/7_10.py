@@ -1,5 +1,5 @@
 #! /usr/bin/python3
-# Matrix
+# paragraphs
 
 from cmath import atan
 from math import atan2, pi,sqrt,pow,cos
@@ -28,7 +28,6 @@ def order(a,b):
             l=0
     output.append(outputl)        
     return output
-
 
 data=1
 while data != "q":

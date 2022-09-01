@@ -49,36 +49,37 @@ def strV2tupleV(xx):
     else:
         return int(x[0]),int(x[1]),int(x[2]),int(x[3]) 
 
+if __name__ == "__main__":
+        
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        firstV=str(input("First vector (ej x1,y1,x2,y2):"))            
+        secondV=str(input("Second vector (ej x1,y1,x2,y2):"))        
+        fV=strV2tupleV(firstV)
+        sV=strV2tupleV(secondV)
+        
+        
+        print("vector1 magnitude | angle:")
+        print(fV)
+        print(str(mag(fV))+"|"+str(ang(fV)))
+        print("vector2 magnitude | angle:")
+        print(sV)
+        print(str(mag(sV))+"|"+str(ang(sV)))
+        
+        
+        print("Are parallel?")
+        print(areParallel(fV,sV))
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    firstV=str(input("First vector (ej x1,y1,x2,y2):"))            
-    secondV=str(input("Second vector (ej x1,y1,x2,y2):"))        
-    fV=strV2tupleV(firstV)
-    sV=strV2tupleV(secondV)
-    
-    
-    print("vector1 magnitude | angle:")
-    print(fV)
-    print(str(mag(fV))+"|"+str(ang(fV)))
-    print("vector2 magnitude | angle:")
-    print(sV)
-    print(str(mag(sV))+"|"+str(ang(sV)))
-    
-    
-    print("Are parallel?")
-    print(areParallel(fV,sV))
+        print("Are orthogonal?")
+        print(areOrthogonal(fV,sV))
+        
+        print("V1.V2 (=|V1|*|V2|*cos(angleº))?")
+        print(cross_product(fV,sV))
+        
+        #print(escalar_product(fV,sV))
+        
 
-    print("Are orthogonal?")
-    print(areOrthogonal(fV,sV))
-    
-    print("V1.V2 (=|V1|*|V2|*cos(angleº))?")
-    print(cross_product(fV,sV))
-    
-    #print(escalar_product(fV,sV))
-    
-
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

@@ -73,18 +73,20 @@ def isPalindrome(x):
 
     return True    
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    caractA=(input("character Array:"))            
-    
-   
-    print(onlyconsonants(str(caractA)))
-    print(noconsonants(str(caractA)))
-    print(repaceConsonant(str(caractA)))
-    print(isPalindrome(str(caractA)))
-    
+if __name__ == "__main__":    
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        caractA=(input("character Array:"))            
+        
+    
+        print(onlyconsonants(str(caractA)))
+        print(noconsonants(str(caractA)))
+        print(repaceConsonant(str(caractA)))
+        print(isPalindrome(str(caractA)))
+        
+
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

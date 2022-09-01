@@ -59,15 +59,18 @@ def sumProm(x):
     return sum,prom    
 
 
+##testing
 
-data=1
-while data != "q":
-    os.system('clear')      
-    print((list))
-    print(listPrime(list))
-    var=sumProm(list)
-    print("prom:"+str(var[1])+"|sum:"+str(var[0]))
-    print(listFactorial(list))
+if __name__ == "__main__":
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        data=1
+        while data != "q":
+            os.system('clear')      
+            print((list))
+            print(listPrime(list))
+            var=sumProm(list)
+            print("prom:"+str(var[1])+"|sum:"+str(var[0]))
+            print(listFactorial(list))
+
+            print("want to repeat?(enter q to exit)")
+            data= (input(">"))

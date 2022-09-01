@@ -33,17 +33,18 @@ def convertBinary(x2):
 
     return sum
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    caractA=(input("Number in binary:"))            
-    
-    
-    print(convertBinary(str(caractA)))
-    
-    
-    
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        caractA=(input("Number in binary:"))            
+        
+        
+        print(convertBinary(str(caractA)))
+        
+        
+        
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

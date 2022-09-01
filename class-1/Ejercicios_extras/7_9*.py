@@ -85,27 +85,30 @@ def liIndep(x):
     return x
 
 
-data=1
-while data != "q":
-    os.system('clear')      
-    print("Matrix 1")
-    pM(matrix1)    
-    print("Matrix 2")
-    pM(matrix2)   
+##testing
 
-    print("Suma:")
-    pM(summ(matrix1,matrix2))
+if __name__ == "__main__":
+        data=1
+        while data != "q":
+            os.system('clear')      
+            print("Matrix 1")
+            pM(matrix1)    
+            print("Matrix 2")
+            pM(matrix2)   
 
-    print("Product:")
-    pM(productM(matrix1,matrix2))
-    print("Product with identity:")
-    pM(productM(matrix1,matrix5))
-    print("Product with vector:")
-    pM(productM(matrix1,vector))
-    print("Product with vector:")
-    pM(productM(vector,matrix1))
+            print("Suma:")
+            pM(summ(matrix1,matrix2))
 
-    pM(triagSupMatrix(matrix6))
-    
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+            print("Product:")
+            pM(productM(matrix1,matrix2))
+            print("Product with identity:")
+            pM(productM(matrix1,matrix5))
+            print("Product with vector:")
+            pM(productM(matrix1,vector))
+            print("Product with vector:")
+            pM(productM(vector,matrix1))
+
+            pM(triagSupMatrix(matrix6))
+            
+            print("want to repeat?(enter q to exit)")
+            data= (input(">"))

@@ -40,22 +40,26 @@ def fun2(x,k):
     
     return list
 
-data=1
-while data != "q":
-    os.system('clear')      
-    print((list))
-    k=4
-    c=2
-    var=fun1(list,k)
-    print("menores que "+str(k))
-    print(var[0])
-    print("iguales que "+str(k))
-    print(var[1])
-    print("mayores que "+str(k))
-    print(var[2])
 
-    print("multiplos de "+str(c))
-    print(fun2(list,c))
+##testing
 
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        print((list))
+        k=4
+        c=2
+        var=fun1(list,k)
+        print("menores que "+str(k))
+        print(var[0])
+        print("iguales que "+str(k))
+        print(var[1])
+        print("mayores que "+str(k))
+        print(var[2])
+
+        print("multiplos de "+str(c))
+        print(fun2(list,c))
+
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))

@@ -39,16 +39,18 @@ def find(lista,value):
 
 
 ##testing
-data=1
-while data != "q":
-    x=0
-    os.system('clear')      
-    
-    d=int(input("Ingrese nro: "))
-    
-    print(str(find(lista,d)))
-    
-    #print(str(lista))
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        x=0
+        os.system('clear')      
+        
+        d=int(input("Ingrese nro: "))
+        
+        print(str(find(lista,d)))
+        
+        #print(str(lista))
+        
+        print("\n want to repeat?(enter q to exit)")
+        data= (input(">"))

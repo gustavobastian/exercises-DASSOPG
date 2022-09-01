@@ -38,16 +38,20 @@ def findMax2(x):
 
 
 ##testing
-data=1
 
-while data != "q":
-    x=0
-    os.system('clear')      
-    print("original:"+str(d))
-    print("looking for Max:"+str(findMax(d)))
-    print("looking for Max(value,position):"+str(findMax2(d)))
-    print("looking for Max(value,position):"+str(findMax2(dd)))
-    
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+
+
+if __name__ == "__main__":
+    data=1
+
+    while data != "q":
+        x=0
+        os.system('clear')      
+        print("original:"+str(d))
+        print("looking for Max:"+str(findMax(d)))
+        print("looking for Max(value,position):"+str(findMax2(d)))
+        print("looking for Max(value,position):"+str(findMax2(dd)))
+        
+        
+        print("\n want to repeat?(enter q to exit)")
+        data= (input(">"))  

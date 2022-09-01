@@ -34,18 +34,21 @@ def findAllPosition(x, value):
     return output  
 
 
+
 ##testing
-data=1
 
-while data != "q":
-    x=0
-    os.system('clear')      
-    print("original:"+str(d))
-    print("looking for 3:"+str(findArgument(d,3)))
-    print("First Position of 3:"+str(findFirstPosition(d,3)))
-    print("looking for 200:"+str(findFirstPosition(d,200)))
+if __name__ == "__main__":
+    data=1
 
-    print("All positions for 3:"+str(findAllPosition(d,3)))
-    
-    print("\n want to repeat?(enter q to exit)")
-    data= (input(">"))
+    while data != "q":
+        x=0
+        os.system('clear')      
+        print("original:"+str(d))
+        print("looking for 3:"+str(findArgument(d,3)))
+        print("First Position of 3:"+str(findFirstPosition(d,3)))
+        print("looking for 200:"+str(findFirstPosition(d,200)))
+
+        print("All positions for 3:"+str(findAllPosition(d,3)))
+        
+        print("\n want to repeat?(enter q to exit)")
+        data= (input(">"))

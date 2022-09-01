@@ -20,18 +20,18 @@ def comparison(carA,carS):
     if(carA>carS): return carS
     else : return carA
 
+if __name__ == "__main__":
+    data=1
+    while data != "q":
+        os.system('clear')      
+        
+        caractA=(input("character sustring:"))            
+        caractAA=(input("character Array:"))            
+        
+        print(comparison(str(caractAA),str(caractA)))
+        #print(isSubs(str(caractAA),str(caractA)))
+        
+        
 
-data=1
-while data != "q":
-    os.system('clear')      
-    
-    caractA=(input("character sustring:"))            
-    caractAA=(input("character Array:"))            
-    
-    print(comparison(str(caractAA),str(caractA)))
-    #print(isSubs(str(caractAA),str(caractA)))
-    
-    
-
-    print("want to repeat?(enter q to exit)")
-    data= (input(">"))
+        print("want to repeat?(enter q to exit)")
+        data= (input(">"))
