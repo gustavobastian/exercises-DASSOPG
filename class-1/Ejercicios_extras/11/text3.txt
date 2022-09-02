@@ -1,0 +1,5 @@
+nombre,apellido,dni,edad
+Pedro,Gomez,123312,72
+Pio,Alber,23221,92
+Ruperta,Perez,23222,93
+Jorgelina,Saraza,2223222,12
