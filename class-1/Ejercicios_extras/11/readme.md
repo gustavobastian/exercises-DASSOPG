@@ -1,8 +1,13 @@
 # In order to run
-./11_1.py "mitext.txt" 1
+./head.py "mitext.txt" 1
 
-./11_2.py "mitext.txt" "mitext2.txt"
+./cp.py "mitext.txt" "mitext2.txt"
 
-./11_3.py "text3.txt" "##" [1,0,2]
+./cut.py "text3.txt" "##" [1,0,2]
 
-./11_4.py "mitext.txt"
+./wc.py "mitext.txt"
+
+./grep.py mitext.txt "di"
+
+./rot13.py mitext.txt mitextE.txt   
+
