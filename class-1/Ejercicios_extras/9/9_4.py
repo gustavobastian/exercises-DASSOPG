@@ -43,6 +43,7 @@ def countingChar(text):
                 val=  countingCharWord(textS[i])    
                 mydicW.update({str(textS[i]):val})
                 mydicW2.update({str(textS[i]):len(textS[i])})
+                
         else:             
             continue
     return mydicW,mydicW2,alldic

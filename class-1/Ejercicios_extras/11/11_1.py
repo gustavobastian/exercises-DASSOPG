@@ -11,8 +11,6 @@ import time
 import os
 
 
-##testing
-
 def printingN(filename,n):
     file=open(filename, 'r')
     lines = file.readlines()
@@ -23,6 +21,8 @@ def printingN(filename,n):
     for i in range(0,d):
         print(f"line {i+1} : {lines[i]}")
 
+
+##testing
 
 if __name__ == "__main__":
     text= "este es un texto que posee muchas palabras extraordinariamente largas , y es bonito"
