@@ -10,9 +10,9 @@ class Corcho:
         return self._bodega
 
 class Botella:
-    _corchoLocal= Corcho()
+    _corchoLocal= Corcho("None")
     def __init__(self) :
-        self.corchoLocal="None"
+        self._corchoLocal=Corcho("None")
 
     def set_corchoLocal(self,corchoLocal):
         self._corchoLocal=corchoLocal  
@@ -21,18 +21,20 @@ class Botella:
         return self._corchoLocal
 
 class Sacacorchos:
-    _corchoSacado= Corcho()
+    _corchoSacado= Corcho("None")
     def __init__(self) :
-        self.corchoSacado= None
+        self.corchoSacado= Corcho("None")
 
     def get_corchoName(self):
-        return self._corchoName
+        return self._corchoSacado.get_bodega()
 
     def destapar(self,botella):
-        
+        if(botella.get_corchoLocal()=="None"): raise Exception("Botella ya destapada")
+        if(self.get_corchoName()!="None"): raise Exception("Sacacorchos ocupado")
         self._corchoSacado=botella.get_corchoLocal()
         botella.set_corchoLocal("None")
 
-    def limpiar(self,botella):
-        self._corchoSacado="None"
+    def limpiar(self):
+        if self.get_corchoName()=="None": raise Exception("sin corcho")
+        self._corchoSacado=Corcho("None")
 
