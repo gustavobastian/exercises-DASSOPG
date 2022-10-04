@@ -33,6 +33,7 @@ class LinkedList:
       print(current.data)
       current = current.next
     raise Exception(StopIteration)  
+  
   # printing linked list 2
   def __str__(self):  
     output=""
@@ -48,7 +49,6 @@ class LinkedList:
       while(current.next):  
         self.insert(current.data)
         current = current.next
-    
 
 # Singly Linked List with insertion and print methods
 
