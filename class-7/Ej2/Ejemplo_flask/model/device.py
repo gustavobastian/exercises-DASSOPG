@@ -1,17 +1,15 @@
 from os import stat
 
 
-class Device:
-    id=0
-    name=""
-    ip=""    
-    state=False
+class Device:   
     
     def __init__(self,idP=0,ipP=0,nameP=None,stateP=False):
         self.id=idP
         self.ip=ipP
         self.name=nameP
-        self.state=stateP
+        if(stateP==0 or stateP==1):
+            self.state=stateP
+        else:self.state=0    
 
     def getId(self):
         return self.id

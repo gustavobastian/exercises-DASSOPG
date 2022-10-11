@@ -12,8 +12,9 @@ class LogDao:
         """        
         print("numPage:"+str(numPage))
         print("sizePage:"+str(sizePage))
+        offset=int(numPage)*int(sizePage)
         c = self.db.cursor()
-        c.execute("SELECT * FROM Log;")
+        c.execute("SELECT * FROM Log limit ? offset ? ;",[sizePage,offset])
         d = c.fetchall()			
         c.close()
         return json.dumps(d)    
@@ -28,7 +29,7 @@ class LogDao:
             self.db.commit()
             print("records:",c.rowcount)
         except sqlite3.Error as error:
-            print("error:",error)
+            print("\"state\":\"ERROR\"")
             
         finally:    
             c.close()                

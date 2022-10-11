@@ -1,8 +1,4 @@
-class Log:
-    id=0
-    id_device=0
-    state=False
-    timeStamp=""
+class Log:    
     
     def __init__(self, id=0, id_device=0,state=False,timestamp=None):
         self.id=id
