@@ -57,12 +57,9 @@ def set_state_devices(deviceId):
     """altering the state of the device on the table
     """
     if request.method == 'PUT':
-        db = get_db()
-        data=(request.get_json())
-        dataj=json.loads(json.dumps(data))
-        newState=dataj['state']        
+        db = get_db()     
         controller2=ControllerDevice(app,request,db)	
-        controller2.put(deviceId,newState)
+        controller2.put(deviceId) #,newState)
         return 'ok'
     elif request.method == 'DELETE':
         """Deleting the device on the table, not implemented yet

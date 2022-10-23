@@ -15,6 +15,9 @@ class ControllerDevice:
         self.app=app
         self.request=request
         self.db=db
+        self.data=(request.get_json())
+        self.dataj=json.loads(json.dumps(self.data))
+        self.newState=self.dataj['state']    
    
     def post(self):
         """Add a new the device, the device information comes in the request body
@@ -26,17 +29,16 @@ class ControllerDevice:
         c = DeviceDao(self.db)        
         c.add(DeviceLocal)
         
-    def put(self,id,state):
+    def put(self,id):
         """Modification of the device state
-        """        
-        newState=state
+        """                
         c = DeviceDao(self.db)        
-        c.set_state(id,newState)
+        c.set_state(id,self.newState)
 
         #generating the new log and adding it to the db
         ts = time.time()
         timestamp=datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-        newLog=Log(0,id,newState,timestamp)
+        newLog=Log(0,id,self.newState,timestamp)
         d=LogDao(self.db)
         d.add_log(newLog)
 
