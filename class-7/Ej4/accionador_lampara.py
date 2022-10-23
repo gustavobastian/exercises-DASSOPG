@@ -35,19 +35,22 @@ if __name__ == '__main__':
 			exit(0)
 			#comparando las dos listas
 		data=json.loads(r.text)
+		
+		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)				
 		for i in range(0,len(localtable)):
 			#print(localtable[i])
 			#print(localtable[i][3])
 			#print(data[i][3])
 			if(localtable[i][3]!=data[i][3]):
-				s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+				
 				s.connect((data[i][2], 4096))
 				if(data[i][3]==1):
 					value=">ST:ON\n"
 				else:
 					value=">ST:OFF\n"	
 				s.send(bytearray(value.encode("UTF-8")))
+				
 			#guardo la última tabla
 			localtable=[]
 			localtable=data
-
+		s.close()
