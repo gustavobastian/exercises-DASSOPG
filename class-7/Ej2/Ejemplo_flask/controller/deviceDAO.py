@@ -21,7 +21,7 @@ class DeviceDao:
         """
         try:
             c = self.db.cursor()     
-            c.execute("INSERT INTO  Devices (name,ip,status) VALUES (?, ?,?)",[newDevice.getName(),newDevice.getIp(),newDevice.getState()])
+            c.execute("INSERT INTO  Devices (name,ip,status) VALUES (?, ?,?)",(newDevice.getName(),newDevice.getIp(),newDevice.getState()))
             self.db.commit()
             print("records:",c.rowcount)
 
@@ -39,7 +39,7 @@ class DeviceDao:
         if ((len(state) ==1)) :
             try:
                 c = self.db.cursor()     
-                c.execute("UPDATE Devices SET status=? Where id=?",[state,id])
+                c.execute("UPDATE Devices SET status=? Where id=?",(state,id))
                 self.db.commit()
                 print("records:",c.rowcount)
 

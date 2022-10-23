@@ -14,7 +14,7 @@ class LogDao:
         print("sizePage:"+str(sizePage))
         offset=int(numPage)*int(sizePage)
         c = self.db.cursor()
-        c.execute("SELECT * FROM Log limit ? offset ? ;",[sizePage,offset])
+        c.execute("SELECT * FROM Log limit ? offset ? ;",(sizePage,offset))
         d = c.fetchall()			
         c.close()
         return json.dumps(d)    
@@ -25,7 +25,7 @@ class LogDao:
         print(newLog)
         try:
             c = self.db.cursor()     
-            c.execute("INSERT INTO  Log (id_device,state,timestam) VALUES (?, ?,?)",[newLog.getIdDevice(),newLog.getState(),newLog.getTimeStamp()])
+            c.execute("INSERT INTO  Log (id_device,state,timestam) VALUES (?, ?,?)",(newLog.getIdDevice(),newLog.getState(),newLog.getTimeStamp()))
             self.db.commit()
             print("records:",c.rowcount)
         except sqlite3.Error as error:
