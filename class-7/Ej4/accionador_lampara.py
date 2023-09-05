@@ -25,7 +25,7 @@ if __name__ == '__main__':
 		exit(0)
 	localtable=json.loads(r.text)
 
-
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)	
 	while True:
 		time.sleep(5)
 		data=[]
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 			#comparando las dos listas
 		data=json.loads(r.text)
 		
-		s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)				
+					
 		for i in range(0,len(localtable)):
 			#print(localtable[i])
 			#print(localtable[i][3])
@@ -53,4 +53,5 @@ if __name__ == '__main__':
 			#guardo la última tabla
 			localtable=[]
 			localtable=data
-		s.close()
+			
+	s.close()	
