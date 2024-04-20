@@ -17,7 +17,7 @@ def distance(x1,y1,x2,y2):
     vd=vector_diff(x1,y1,x2,y2)
     return norm(vd[0],vd[1])
 
-def normV(x,y):
+def norm_v(x,y):
     xx=x/(norm(x,y))
     yy=y/(norm(x,y))
     return [xx,yy]
@@ -25,7 +25,7 @@ def normV(x,y):
 
 def unitary_diff_vector(x1,y1,x2,y2):
     vd=vector_diff(x1,y1,x2,y2)
-    output=normV(vd)
+    output=norm_v(vd[0],vd[1])
     return output    
 
 
@@ -49,7 +49,7 @@ def proyection(x,y,dx,dy,cx,cy):
 def area(width, height):
     return (width*height)/2
 
-def calculatingArea(x1, y1, x2, y2, x3, y3):
+def calculating_area(x1, y1, x2, y2, x3, y3):
     #Using Herons formula
     #calculating sides
     s1=abs(distance(x1,y1,x2,y2))
@@ -76,7 +76,7 @@ output= proyection(vector1_P[0],vector1_P[1] ,vector2_PN[0],vector2_PN[1],0,0)
 
 print("proyection: "+str(output[0])+","+str(output[1]))
 """
-answer=calculatingArea(0,0,1,0,1,2)
+answer=calculating_area(0,0,1,0,1,2)
 print("Area:"+str(round(answer,2)))
 
 

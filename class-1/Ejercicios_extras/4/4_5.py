@@ -28,7 +28,7 @@ def day_per_month(x):
 
 ## parameter in form "dd/mm/yy"
 def date_valid(date):
-    value=splitDate(date)
+    value=split_date(date)
     day=int(value[0])
     month=int(value[1])
     year=int(value[2])
@@ -44,14 +44,14 @@ def date_valid(date):
         print("invalid Date")   
 
 ## parameter in form "dd/mm/yy"
-def splitDate(date):
+def split_date(date):
     date = date.split('/')        
     return date
 
 ## parameter in form "dd/mm/yy"
-def daysLastMonth(date):
+def days_last_month(date):
     if(date_valid(date)==False) : return "error"
-    value=splitDate(date)
+    value=split_date(date)
     day=int(value[0])
     month=int(value[1])
     year=int(value[2])
@@ -61,9 +61,9 @@ def daysLastMonth(date):
 
 
 ## parameter in form "dd/mm/yy"
-def daysLastYear(date):
+def days_last_year(date):
     if(date_valid(date)==False) : return "error"
-    value=splitDate(date)
+    value=split_date(date)
     day=int(value[0])
     month=int(value[1])
     year=int(value[2])
@@ -76,9 +76,9 @@ def daysLastYear(date):
     return days
 
 ## parameter in form "dd/mm/yy"
-def countingDays(date):
+def counting_days(date):
     if(date_valid(date)==False) : return "error"
-    value=splitDate(date)
+    value=split_date(date)
     day=int(value[0])
     month=int(value[1])
     year=int(value[2])
@@ -94,8 +94,8 @@ def countingDays(date):
 def  date_comparison(date1,date2):
     if(date_valid(date1)==False) : return "error"
     if(date_valid(date2)==False) : return "error"
-    value1=splitDate(date1)
-    value2=splitDate(date2)
+    value1=split_date(date1)
+    value2=split_date(date2)
     
     if(value1[2]==value2[2]):
         if(value1[1]==value2[1]):    
@@ -108,10 +108,10 @@ def  date_comparison(date1,date2):
 
 # counting days between dates
 def counting_days_between(value1, value2):
-    isOk= date_comparison(value1,value2)
+    is_ok= date_comparison(value1,value2)
 
     # in date 1 always will be the earliest date
-    if(isOk==False): 
+    if(is_ok==False): 
         date1=(value1)
         date2=(value2)
     else:
@@ -119,8 +119,8 @@ def counting_days_between(value1, value2):
         date2=(value1)
 
     #splitting the dates for checking years
-    date1_s=splitDate(date1)
-    date2_s=splitDate(date2)
+    date1_s=split_date(date1)
+    date2_s=split_date(date2)
     
     days=0
     if(date1_s[2]==date2_s[2]):
@@ -128,7 +128,7 @@ def counting_days_between(value1, value2):
             days=int(date2_s[0])-int(date1_s[0])
         else:
             if(int(date1_s[1])<int(date2_s[1])):                
-                days=int(date2_s[0])+daysLastMonth(date1)
+                days=int(date2_s[0])+days_last_month(date1)
                 for i in range(int(date1_s[1]),int(date2_s[1])-1):
                     days+=tableDays[i-1]
 
@@ -138,7 +138,7 @@ def counting_days_between(value1, value2):
             else:## as we order the dates previously, we do not need to worry abour this case                
                 days=0        
     else:        
-        days=countingDays(date1)+daysLastYear(date2)        
+        days=counting_days(date1)+days_last_year(date2)        
         for i in range(int(date2_s[2])+1,int(date1_s[2])):                    
                     days+=365
                     if(bisiesto(i)==True):                         
@@ -163,14 +163,14 @@ while (number!=0):
     date1=(input("fecha1  day/month/year : "))
     date2=(input("fecha2  day/month/year : "))
     print(bisiesto(1999))
-    #print(date_valid(date))
-    #print(daysLastMonth(date))
-    #print(daysLastYear(date))
-    #print(countingDays(date))
-    #print(date_comparison(date,date2))
-    #print(date_comparison(date2,date))
+    print(date_valid(date1))
+    print(days_last_month(date1))
+    print(days_last_year(date1))
+    print(counting_days(date1))
+    print(date_comparison(date1,date2))
+    print(date_comparison(date2,date1))
     print("Days between dates:")
-    print(counting_days_between(date1,date2))
+    print("counting days:"+str(counting_days_between(date1,date2)))
     
     print("press enter to continue(q to quit) ")
     n=input(">")

@@ -11,10 +11,10 @@ print("Bienvenido, jugando con fechas")
 def time_to_seconds(hour, minute, second):
         print("time_to_seconds:"+str( hour*3600 + minute*60 + second))
 
-def seconds_to_time(secondsTotal):
-    hour= int(secondsTotal/3600)
-    minutes= int((secondsTotal%3600)/60)
-    seconds= int(((secondsTotal%3600)%60)%60)
+def seconds_to_time(seconds_total):
+    hour= int(seconds_total/3600)
+    minutes= int((seconds_total%3600)/60)
+    seconds= int(((seconds_total%3600)%60)%60)
     print("time:"+str(hour)+":"+str(minutes)+":"+str(seconds))
 
 
