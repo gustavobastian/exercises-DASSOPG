@@ -1,8 +1,11 @@
 #! /usr/bin/python3
 
 from math import pi,sqrt
+
 import os 
 
+
+CONTINUAR = "PRESIONA CUALQUIER COSA PARA CONTINUAR"
 
 response = 1
 
@@ -57,19 +60,19 @@ if __name__ == "__main__":
                 numero1=float(input("Ingresa base: "))
                 numero2=float(input("Ingresa altura: "))
                 perim_area_rectangle(numero1,numero2)
-                input("PRESIONA CUALQUIER COSA PARA CONTINUAR")
+                input(CONTINUAR)
             elif response==2:
                 os.system('clear')
                 print("calculando area de circulo")
                 numero1=float(input("Ingresa radio: "))        
                 perim_area_circle(numero1)
-                input("PRESIONA CUALQUIER COSA PARA CONTINUAR")    
+                input(CONTINUAR)    
             elif response==3:
                 os.system('clear')
                 print("calculando volumen de esfera")
                 numero1=float(input("Ingresa radio: "))        
                 volume_esphere(numero1)
-                input("PRESIONA CUALQUIER COSA PARA CONTINUAR")        
+                input(CONTINUAR)        
             elif response==4:
                 os.system('clear')
                 print("calculando area de rectangulo por coordenadas")
@@ -78,15 +81,15 @@ if __name__ == "__main__":
                 numero3=float(input("Ingresa y1: "))
                 numero4=float(input("Ingresa y2: "))
                 area_rectangle(numero1,numero2,numero3,numero4)
-                input("PRESIONA CUALQUIER COSA PARA CONTINUAR")    
+                input(CONTINUAR)    
             elif response==5:
                 os.system('clear')
                 print("calculando hipotenusa")
                 numero1=float(input("Ingresa Cateto1: "))
                 numero2=float(input("Ingresa Cateto2: "))        
                 hipotenuse(numero1,numero2)
-                input("PRESIONA CUALQUIER COSA PARA CONTINUAR")        
-            else : input("PRESIONA CUALQUIER COSA PARA CONTINUAR")   
+                input(CONTINUAR)        
+            else : input(CONTINUAR)   
 
 
 
