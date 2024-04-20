@@ -19,7 +19,7 @@ def convert_str_2_tup(str):
 
 def convert_str_2_tup_2(str):
     x=str.split('-')
-    if(((len(x)!=2)) or (((int(x[0]))<0) or((int(x[0]))>9)) or (((int(x[1]))<0) or((int(x[1]))>9))): 
+    if((len(x)!=2)) or (((int(x[0]))<0) or((int(x[0]))>9)) or (((int(x[1]))<0) or((int(x[1]))>9)): 
         print(ERROR_L)
         return(0,0)   
     else:

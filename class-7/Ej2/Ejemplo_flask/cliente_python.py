@@ -5,6 +5,8 @@ BASE_URL = "http://localhost:5000"
 
 print("Cliente HTTP para pruebas")
 
+ERROR_L = "error code:"
+
 while True:
     print("\n1) GET a /devices")
     print("2) PUT a /device")
@@ -19,7 +21,7 @@ while True:
         if r.status_code==200:
             print(r.text)
         else:
-            print("error code:"+str(r.status_code))
+            print(ERROR_L+str(r.status_code))
 
     elif op==2:
         id_lamp = input("Ingrese ID de lampara:")
@@ -30,7 +32,7 @@ while True:
         if r.status_code==200:
             print(r.text)
         else:
-            print("error code:"+str(r.status_code))
+            print(ERROR_L+str(r.status_code))
 
     elif op==3:
         page = input("Ingrese numero de pagina:")
@@ -40,7 +42,7 @@ while True:
         if r.status_code==200:
             print(r.text)
         else:
-            print("error code:"+str(r.status_code))
+            print(ERROR_L+str(r.status_code))
     
     elif op==4:
         
@@ -54,7 +56,7 @@ while True:
         if r.status_code==200:
             print(r.text)
         else:
-            print("error code:"+str(r.status_code))
+            print(ERROR_L+str(r.status_code))
 
 
     elif op==5:

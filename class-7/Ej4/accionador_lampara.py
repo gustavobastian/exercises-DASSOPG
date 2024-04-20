@@ -14,6 +14,8 @@ def handler(sig, frame):
     print("saliendo en forma ordenada")
     exit(0)
 
+ERROR_L="error code:"
+
 signal.signal(signal.SIGINT, handler)
 
 if __name__ == '__main__':
@@ -21,7 +23,7 @@ if __name__ == '__main__':
 
 	r = requests.get(url = BASE_URL+"/devices")
 	if r.status_code!=200:
-		print("error code:"+str(r.status_code))
+		print(ERROR_L+str(r.status_code))
 		exit(0)
 	localtable=json.loads(r.text)
 
@@ -31,16 +33,13 @@ if __name__ == '__main__':
 		data=[]
 		r = requests.get(url = BASE_URL+"/devices")
 		if r.status_code!=200:			
-			print("error code:"+str(r.status_code))
-			exit(0)
-			#comparando las dos listas
+			print(ERROR_L+str(r.status_code))
+			exit(0)			
 		data=json.loads(r.text)
 		
 					
 		for i in range(0,len(localtable)):
-			#print(localtable[i])
-			#print(localtable[i][3])
-			#print(data[i][3])
+			
 			if(localtable[i][3]!=data[i][3]):
 				
 				s.connect((data[i][2], 4096))

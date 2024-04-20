@@ -6,17 +6,17 @@ mydict= {'Name': 'Gustavo', 'Lastname': 'GustavoLastname', 'Information': 'male'
 
 
 
-def myfun(filename,dictP):
+def myfun(filename,dict_p):
     print(filename)
-    print(dictP)
+    print(dict_p)
 
     try:
         file_object = open(filename,"w+")
 
-        for item in dictP:                    
+        for item in dict_p:                    
                         file_object.write(str(item))
                         file_object.write('=')
-                        file_object.write(dictP.get(item))
+                        file_object.write(dict_p.get(item))
                         file_object.write("\n")
 
         file_object.close()

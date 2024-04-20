@@ -4,8 +4,8 @@ import os
 
 list = {}
 def myfun():
-    cmdOut = os.popen('ls /dev/tty*').read()
-    print(cmdOut)
+    cmd_out = os.popen('ls /dev/tty*').read()
+    print(cmd_out)
     return True
 
 myfun()

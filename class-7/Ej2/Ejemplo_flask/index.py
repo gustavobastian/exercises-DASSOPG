@@ -76,13 +76,12 @@ def log():
     if request.method == 'GET':    
         """asking for all the logs from the database
         """
-        #print("here")
-        #print(request.args)
-        numPage=request.args['page']
-        sizePage=request.args['size']
+        
+        num_page=request.args['page']
+        size_page=request.args['size']
         db = get_db()
         controller=ControllerLog(app,request,db)	
-        return controller.get(numPage,sizePage)
+        return controller.get(num_page,size_page)
     
 
 

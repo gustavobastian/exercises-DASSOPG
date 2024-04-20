@@ -25,9 +25,9 @@ class ControllerDevice:
         data=(self.request.get_json())
         dataj=json.loads(json.dumps(data))
 
-        DeviceLocal=Device(dataj['id_lamp'],dataj['ip_lamp'],dataj['name'],dataj['state'])
+        device_local=Device(dataj['id_lamp'],dataj['ip_lamp'],dataj['name'],dataj['state'])
         c = DeviceDao(self.db)        
-        c.add(DeviceLocal)
+        c.add(device_local)
         
     def put(self,id):
         """Modification of the device state
@@ -38,9 +38,9 @@ class ControllerDevice:
         #generating the new log and adding it to the db
         ts = time.time()
         timestamp=datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-        newLog=Log(0,id,self.newState,timestamp)
+        new_log=Log(0,id,self.newState,timestamp)
         d=LogDao(self.db)
-        d.add_log(newLog)
+        d.add_log(new_log)
 
         
 
