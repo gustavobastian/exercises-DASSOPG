@@ -53,7 +53,7 @@ if __name__ == "__main__":
             print("*************************************************")
             response=int(input(">"))
 
-            if(response>6): input("Error : PRESIONA CUALQUIER COSA PARA CONTINUAR")
+            if(response>6): input("Error : "+ CONTINUAR)
             elif response==1:
                 os.system('clear')
                 print("calculando area de rectangulo")
