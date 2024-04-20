@@ -13,8 +13,7 @@ percent= 7.0
 
 
 def resolved_ex(x,number_of_exercises,percent):
-    number_of_exercises= 10
-    percent= 70
+    
     if( (x/number_of_exercises)> (percent/100 ) ):
         return "approved"
     else: return "dissaproved"
@@ -28,9 +27,7 @@ while data != "q":
     os.system('clear')      
     digit=int(input("ejercicios resueltos:"))        
     
-    print(resolved_ex(digit,number_of_exercises,percent))
-
-    
+    print(resolved_ex(digit,number_of_exercises,percent))   
     
 
     print("want to repeat?(enter q to exit)")

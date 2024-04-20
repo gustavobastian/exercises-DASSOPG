@@ -46,11 +46,6 @@ if __name__ == "__main__":
 
         print(can_use(primerFicha,segundaFicha))
         
-        
         #print(convertBinary(str(caractA)))
-        
-        
-        
-
         print("want to repeat?(enter q to exit)")
         data= (input(">"))

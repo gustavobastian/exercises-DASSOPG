@@ -16,7 +16,7 @@ class ControllerLog:
         self.db=db
    
 
-    def get(self,numPage,sizePage):        
+    def get(self,num_page,size_page):        
         
         c = LogDao(self.db)        
-        return c.get_all(numPage,sizePage)
+        return c.get_all(num_pPage,size_page)

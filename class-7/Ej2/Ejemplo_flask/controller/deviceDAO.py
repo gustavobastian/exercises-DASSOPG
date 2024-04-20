@@ -16,12 +16,12 @@ class DeviceDao:
         c.close()
         return json.dumps(d)    
 
-    def add(self,newDevice):
+    def add(self,new_device):
         """This function adds a new device to the database
         """
         try:
             c = self.db.cursor()     
-            c.execute("INSERT INTO  Devices (name,ip,status) VALUES (?, ?,?)",(newDevice.getName(),newDevice.getIp(),newDevice.getState()))
+            c.execute("INSERT INTO  Devices (name,ip,status) VALUES (?, ?,?)",(new_device.getName(),new_device.getIp(),new_device.getState()))
             self.db.commit()
             print("records:",c.rowcount)
 
@@ -30,13 +30,13 @@ class DeviceDao:
             
         finally:    
             c.close()        
-            return "ok"
+            
 
     def set_state(self,id,state):
         """This function modify the state of the device
         """
         print(len(state))
-        if ((len(state) ==1)) :
+        if (len(state) ==1) :
             try:
                 c = self.db.cursor()     
                 c.execute("UPDATE Devices SET status=? Where id=?",(state,id))
@@ -48,6 +48,6 @@ class DeviceDao:
                 
             finally:    
                 c.close()        
-                return "ok"        
+            
         else:
                return "return  invalid new state"        
