@@ -9,8 +9,7 @@ import os
 
 
 def inverted(x):
-    d=str(x)
-    z=len(d)
+    d=str(x)    
     i=1
     s=""
     while i < len(d):                        
@@ -28,7 +27,7 @@ def insert3(string, char):
     return s    
 
 
-def printingMiles(x):
+def printing_miles(x):
     s=inverted(x)
     print(s)    
     s2=insert3(s,'.')
@@ -44,7 +43,7 @@ while data != "q":
     caractA=(input("character Array:"))            
     
    
-    printingMiles(str(caractA))
+    printing_miles(str(caractA))
     
     
 

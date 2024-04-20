@@ -7,14 +7,14 @@ import random
 import time
 import os
 
-def firstL(x):
+def first_l(x):
     data=x.split(' ')
     output=""
     for i in range(0,len(data)):
         output+=data[i][0]
     return output
 
-def firstM(x):
+def first_m(x):
     data=x.split(' ')
     output=""
     for i in range(0,len(data)):
@@ -24,7 +24,7 @@ def firstM(x):
         output+=" "
     return output
 
-def wordsA(x):
+def words_a(x):
     data=x.split(' ')
     output=""
     for i in range(0,len(data)):
@@ -41,9 +41,9 @@ while data != "q":
     caractA=(input("character Array:"))            
     
    
-    print(firstL(str(caractA)))
-    print(firstM(str(caractA)))
-    print(wordsA(str(caractA)))
+    print(first_l(str(caractA)))
+    print(first_m(str(caractA)))
+    print(words_a(str(caractA)))
     
     
 

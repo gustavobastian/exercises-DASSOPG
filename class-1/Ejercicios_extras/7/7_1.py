@@ -14,7 +14,7 @@ tupleEl4=('a','b','c','e','d','f','g','h')
 tupleEl5=('aa','ba','ca','da','ea','fa','ga','ha')
 tupleEl6=('aa','ba','ca','ea','da','fa','ga','ha')
 
-def isSorted(x):
+def is_sorted(x):
     for i in range(1, len(x)):
         if x[i]<x[i-1]: return False
         else: continue
@@ -27,12 +27,12 @@ if __name__ == "__main__":
         
         #caractA=(input("Number in binary:"))            
         
-        print(isSorted(tupleEl))
-        print(isSorted(tupleEl2))
-        print(isSorted(tupleEl3))
-        print(isSorted(tupleEl4))
-        print(isSorted(tupleEl5))
-        print(isSorted(tupleEl6))
+        print(is_sorted(tupleEl))
+        print(is_sorted(tupleEl2))
+        print(is_sorted(tupleEl3))
+        print(is_sorted(tupleEl4))
+        print(is_sorted(tupleEl5))
+        print(is_sorted(tupleEl6))
         
         #print(convertBinary(str(caractA)))
         

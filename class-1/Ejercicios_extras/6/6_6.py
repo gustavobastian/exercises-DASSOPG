@@ -11,8 +11,7 @@ import os
 
 
 def inverted(x):
-    d=str(x)
-    z=len(d)
+    d=str(x)    
     i=1
     s=""
     while i < len(d):                        
@@ -38,7 +37,7 @@ def noconsonants(x):
             output+=x[i]         
     return output    
 
-def repaceConsonant(x):
+def repace_consonant(x):
     output=""
     for i in range (0,len(x)):        
             if(x[i]=='A'):
@@ -65,7 +64,7 @@ def repaceConsonant(x):
                 output+= x[i]   
     return output    
 
-def isPalindrome(x):
+def is_palindrome(x):
     d=inverted(x)
     for i in range(0, len(x)):
         if (x[i]!=d[i]) : return False
@@ -84,8 +83,8 @@ if __name__ == "__main__":
     
         print(onlyconsonants(str(caractA)))
         print(noconsonants(str(caractA)))
-        print(repaceConsonant(str(caractA)))
-        print(isPalindrome(str(caractA)))
+        print(repace_consonant(str(caractA)))
+        print(is_palindrome(str(caractA)))
         
 
         print("want to repeat?(enter q to exit)")

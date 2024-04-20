@@ -8,20 +8,20 @@ import time
 import os
 
 
-def inserChar(string, char):    
+def insert_char(string, char):    
     s=""
     for i in range (0, len(string)):
         s+=string[i]+str(char)
     return s
 
-def replaceChar(string, char):    
+def replace_char(string, char):    
     s=""
     for i in range (0, len(string)):
         if (string[i] == " "): s+= str(char)
         else : s+=string[i]
     return s
 
-def replaceNumber(string, char):    
+def replace_number(string, char):    
     s=""
     for i in range (0, len(string)):
         if (string[i].isdigit()==True):  s+= str(char)
@@ -42,9 +42,9 @@ while data != "q":
     caract=(input("character :"))            
     caractA=(input("character Array:"))            
    
-    print(inserChar(caractA,caract))
-    print(replaceChar(caractA,caract))
-    print(replaceNumber(caractA,caract))
+    print(insert_char(caractA,caract))
+    print(replace_char(caractA,caract))
+    print(replace_number(caractA,caract))
     print(insert3(caractA,caract))
     
 

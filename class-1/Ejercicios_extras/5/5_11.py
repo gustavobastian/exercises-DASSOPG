@@ -9,7 +9,7 @@ import os
 
 
 
-def digitN(x1,y2):
+def digit_n(x1,y2):
     if ((x1>10) and (y2<10)): 
         x= y2
         y= x1
@@ -35,7 +35,7 @@ while data != "q":
     digit=int(input("insert digit:"))        
     number1=int(input("insert number1:"))       
 
-    print(digitN(digit,number1))
+    print(digit_n(digit,number1))
     
 
     print("want to repeat?(enter q to exit)")

@@ -7,7 +7,7 @@ import random
 import time
 import os
 
-def isPowerOfTwo(x):
+def is_power_of_two(x):
     d=1    
     while(d<=x):
       #  print("d:"+str(d))
@@ -19,10 +19,10 @@ def isPowerOfTwo(x):
         elif (n<x): d+=1
         else : return False
 
-def numberSum(x1,x2):
+def number_sum(x1,x2):
     sum=0
     for i in range (x1,x2+1):
-        if(isPowerOfTwo(i)):
+        if(is_power_of_two(i)):
             sum+=i
     return sum        
 
@@ -33,7 +33,7 @@ while data != "0":
     os.system('clear')      
     number1=int(input("insert number1:"))        
     number2=int(input("insert number2:"))        
-    print("suma:"+str(numberSum(number1,number2)))
+    print("suma:"+str(number_sum(number1,number2)))
 
     print("want to repeat?(0 exits)")
     data= (input(">"))

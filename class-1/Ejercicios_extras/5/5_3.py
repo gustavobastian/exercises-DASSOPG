@@ -5,25 +5,25 @@ from operator import truediv
 import time
 import os
 
-def comparePass(password,localpass):
+def compare_pass(password,localpass):
         if password==localpass:
             return True
         else:
             return False    
 
 
-def askPass():
+def ask_pass():
     password= "hola mundo"
-    passwordCorrect= False
+    password_correct= False
     tried=0
-    while passwordCorrect==False:
+    while password_correct==False:
         os.system('clear')
         tried+=1
         print("Insert Password:")
-        passwordInserted=input(">")
-        if(comparePass(passwordInserted, password)):
+        password_inserted=input(">")
+        if(compare_pass(password_inserted, password)):
             print("you gain access")
-            passwordCorrect=True
+            password_correct=True
         else: 
             os.system('clear')
             print("error")
@@ -33,5 +33,5 @@ def askPass():
                 exit(0)
 
 
-askPass()
+ask_pass()
 

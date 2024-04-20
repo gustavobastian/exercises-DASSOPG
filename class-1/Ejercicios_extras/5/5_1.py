@@ -12,7 +12,7 @@ prom=0.0
 sum=0.0
 number_of_notes=0
 
-def calc_prom(note,number_of_notes,sum):
+def calc_prom(number_of_notes,sum):
     prom=sum/number_of_notes
     return prom
 
@@ -22,7 +22,7 @@ while number != '0' :
     note=float(input("Insert new note:"))
     number_of_notes += 1
     sum+=note
-    prome=float(calc_prom(note,number_of_notes,sum))
+    prome=float(calc_prom(number_of_notes,sum))
     print("prom:"+ str(round(prome,2)))
     print("press enter for add other (0 exits)")
     number=(input(">"))

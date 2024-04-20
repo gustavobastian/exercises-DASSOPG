@@ -8,8 +8,8 @@ import time
 import os
 
 
-def multiplesNumbers(x1,x2):
-    #if(x1==1) or (x2==1): return 0
+def multiples_numbers(x1,x2):
+    if(x1==1) or (x2==1): return 0
     if(x1==x2): return 1
     if x1>x2: 
         n1=x2
@@ -22,8 +22,8 @@ def multiplesNumbers(x1,x2):
         if i*n1>=n2:
             return i
 
-def multiplesNumbersW(x1,x2):
-    #if(x1==1) or (x2==1): return 0
+def multiples_numbers_w(x1,x2):
+    if(x1==1) or (x2==1): return 0
     if(x1==x2): return 1
     if x1>x2: 
         n1=x2 
@@ -42,8 +42,8 @@ while data != "q":
     os.system('clear')      
     number1=int(input("insert number1:"))        
     number2=int(input("insert number2:"))        
-    print("Multiples:"+str(int(multiplesNumbers(number1,number2))))
-    print("MultiplesW:"+str(int(multiplesNumbersW(number1,number2))))
+    print("Multiples:"+str(int(multiples_numbers(number1,number2))))
+    print("MultiplesW:"+str(int(multiples_numbers_w(number1,number2))))
 
     print("want to repeat?(enter q to exit)")
     data= (input(">"))

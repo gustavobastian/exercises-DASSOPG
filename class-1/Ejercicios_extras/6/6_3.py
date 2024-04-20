@@ -8,7 +8,7 @@ import time
 import os
 
 
-def inserChar(string, char, max):    
+def insert_char(string, char, max):    
     s=""
     count=0
     for i in range (0, len(string)):
@@ -20,7 +20,7 @@ def inserChar(string, char, max):
         
     return s
 
-def replaceChar(string, char,max):    
+def replace_char(string, char,max):    
     s=""
     count=0
     for i in range (0, len(string)):
@@ -30,7 +30,7 @@ def replaceChar(string, char,max):
         else : s+=string[i]
     return s
 
-def replaceNumber(string, char,max):    
+def replace_number(string, char,max):    
     s=""
     count=0
     for i in range (0, len(string)):
@@ -58,9 +58,9 @@ while data != "q":
     caractA=(input("character Array:"))            
     max=int(input("max subs:"))            
    
-    print(inserChar(caractA,caract,max))
-    print(replaceChar(caractA,caract,max))
-    print(replaceNumber(caractA,caract,max))
+    print(insert_char(caractA,caract,max))
+    print(replace_char(caractA,caract,max))
+    print(replace_number(caractA,caract,max))
     print(insert3(caractA,caract,max))
     
 

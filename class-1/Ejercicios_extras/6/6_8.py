@@ -7,31 +7,27 @@ import random
 import time
 import os
 
-
-
-
 def inverted(x):
-    d=str(x)
-    z=len(d)
+    d=str(x)    
     i=1
     s=""
     while i < len(d):                        
             s+=d[-i]            
             i+=1
     s+=d[0]                 
+    print("s:"+str(s))
     return s   
 
-def convertBinary(x2):
-    x=inverted(x2)
-    sum=0
-    xi=2
-    if (x[0]=='1'): sum+=2
-    if(len(x)==1): return sum
+def convert_binary(x2):
+    x=x2
+    sum_l=0
+    xi=1
+    if (x[0]=='1'): sum_l+=1
+    if(len(x)==1): return sum_l
     for i in range (1,len(x)):
-        if x[i]=='1': sum+=xi
-        xi*2 
-
-    return sum
+        sum_l*=2 
+        if x[i]=='1': sum_l+=xi        
+    return sum_l
 
 if __name__ == "__main__":
     data=1
@@ -41,7 +37,7 @@ if __name__ == "__main__":
         caractA=(input("Number in binary:"))            
         
         
-        print(convertBinary(str(caractA)))
+        print(convert_binary(str(caractA)))
         
         
         

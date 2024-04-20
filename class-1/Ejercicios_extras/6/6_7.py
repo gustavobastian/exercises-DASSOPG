@@ -7,18 +7,18 @@ import random
 import time
 import os
 
-def isSubs(carA, carS):
-    d=len(carA)-len(carS)
+def is_subs(car_a, car_s):
+    d=len(car_a)-len(car_s)
     print(d)
-    for i in range(0, len(carA)-len(carS)+1):
-        print(carA[i:i+len(carS)])
-        if(carA[i:i+len(carS)]==carS) : return True
+    for i in range(0, len(car_a)-len(car_s)+1):
+        print(car_a[i:i+len(car_s)])
+        if(car_a[i:i+len(car_s)]==car_s) : return True
         else :continue
     return False
 
-def comparison(carA,carS):
-    if(carA>carS): return carS
-    else : return carA
+def comparison(car_a,car_s):
+    if(car_a>car_s): return car_s
+    else : return car_a
 
 if __name__ == "__main__":
     data=1
@@ -31,7 +31,5 @@ if __name__ == "__main__":
         print(comparison(str(caractAA),str(caractA)))
         #print(isSubs(str(caractAA),str(caractA)))
         
-        
-
         print("want to repeat?(enter q to exit)")
         data= (input(">"))

@@ -18,11 +18,11 @@ tableSign=[
         "Capricornio",        
     ]
 
-def signOf(x):    
+def sign_of(x):    
     data_local=x.split("/")
     data=[int(data_local[1]),int(data_local[0])]
     
-    output=""
+    
     if(data[0]==1):
         if(data[1]<21): print( tableSign[11])
         else: print( tableSign[0])
@@ -66,6 +66,6 @@ number=1
 while number != '0' :
     os.system('clear')
     data=input("Write your birthdate(dd/mm):")
-    signOf(data)
+    sign_of(data)
     print("press enter for repeat (0 exits)")
     number=(input(">"))

@@ -12,7 +12,7 @@ number_of_exercises= 10
 percent= 7.0
 
 
-def resolvedEx(x,number_of_exercises,percent):
+def resolved_ex(x,number_of_exercises,percent):
     number_of_exercises= 10
     percent= 70
     if( (x/number_of_exercises)> (percent/100 ) ):
@@ -28,7 +28,7 @@ while data != "q":
     os.system('clear')      
     digit=int(input("ejercicios resueltos:"))        
     
-    print(resolvedEx(digit,number_of_exercises,percent))
+    print(resolved_ex(digit,number_of_exercises,percent))
 
     
     

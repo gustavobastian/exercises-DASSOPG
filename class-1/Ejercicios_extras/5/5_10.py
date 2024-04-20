@@ -8,7 +8,7 @@ import time
 import os
 
 
-def isPrime(x):
+def is_prime(x):
     for i in range (2,x):
         if(x%i==0): return False
     return True    
@@ -17,7 +17,7 @@ def primes(x):
     i=1
     while i<x:
         i+=1
-        if(isPrime(i)== True): print(i)
+        if(is_prime(i)== True): print(i)
 
 data=1
 while data != "q":
