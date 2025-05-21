@@ -104,7 +104,7 @@ def  date_comparison(date1,date2):
         elif (value1[1]>value2[1]):return True
         else :return False   
     elif (value1[2]>value2[2]):return True            
-    else: False
+    else: return False
 
 # counting days between dates
 def counting_days_between(value1, value2):
@@ -144,10 +144,6 @@ def counting_days_between(value1, value2):
                     if(bisiesto(i)==True):                         
                         print(i)
                         days+=1
-
-
-        
-
     return days    
     
 
@@ -155,11 +151,7 @@ def counting_days_between(value1, value2):
 number=1
 while (number!=0):
     os.system('clear')
-    #number=int(input("Numero: "))
-    #if(number !=0): print(bisiesto(number))
-    #if(number !=0): 
-    #    if (number<13) and (number >0):print(day_per_month(number-1))
-    #else : exit(0)
+  
     date1=(input("fecha1  day/month/year : "))
     date2=(input("fecha2  day/month/year : "))
     print(bisiesto(1999))

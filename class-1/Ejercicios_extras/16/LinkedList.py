@@ -54,8 +54,7 @@ class LinkedList:
 
 """handler for clean quit
 """
-def handler(sig, frame):
-    #print(sig)
+def handler():    
     print("saliendo en forma ordenada")
     exit(0)
 

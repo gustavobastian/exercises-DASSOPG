@@ -6,6 +6,7 @@ import sys
 
 class Main:
 
+    #this class is the main class and the constructor just create the instance            
     def __init__(self):
         pass
 

@@ -7,16 +7,21 @@ import random
 import time
 import os
 
+POINTS="********************************"
+VOTE = ", vote por mi."
+ESTIMADO= "Estimado, "
+ESTIMADA= "Estimada, "
+
 x=("Pedro Vivas","Rosario","Alberto ", "Santo Domingo","Estefania Sl","Unilater Ac")
 xx=(("Pedro Vivas","M"),("Rosario","F"),("Alberto ","M"),("Estefania L","F"),("Santo Domingo ","M"))
 
 def printE(x):
     for i in range(0, len(x)):
-        print("Estimado "+str(x[i])+",vote por mi")
+        print(ESTIMADO+str(x[i])+VOTE)
 
 def printEBis(x):
     for i in range(0, len(x)):
-        print("Estimado "+str(x[i][0])+",vote por mi")
+        print(ESTIMADO+str(x[i][0])+VOTE)
 
 
 def printE2(x,origen, cant):
@@ -33,7 +38,7 @@ def printE2(x,origen, cant):
         ori= 0    
 
     for i in range(ori, d):
-        print("Estimado "+str(x[i])+",vote por mi")
+        print(ESTIMADO+str(x[i])+VOTE)
 
 def printE2Bis(x,origen, cant):
     if((origen<0) or (cant<0)):
@@ -50,33 +55,23 @@ def printE2Bis(x,origen, cant):
 
     for i in range(ori, d):
         if(str(x[i][1])=="M"):
-            print("Estimado "+str(x[i][0])+",vote por mi")
+            print(ESTIMADO+str(x[i][0])+VOTE)
         else: 
-            print("Estimada "+str(x[i][0])+",vote por mi")    
+            print(ESTIMADA+str(x[i][0])+VOTE)    
 
 if __name__ == "__main__":
     data=1
     while data != "q":
         os.system('clear')      
-        
-    # primerFicha=str(input("First token (ej 1,2):"))            
-    # segundaFicha=str(input("Second token (ej 1,2):"))            
-        
-    # print(convertStr2Tup2(primerFicha))
-    # print(convertStr2Tup2(segundaFicha))
-
-    # print(canUse(primerFicha,segundaFicha))
-        
-        
-        #print(convertBinary(str(caractA)))
+  
         printE(x)
-        print("********************************")
+        print(POINTS)
         printE2(x,3,2)
-        print("********************************")
+        print(POINTS)
         printEBis(xx)
-        print("********************************")
+        print(POINTS)
         printE2Bis(xx,3,2)
-        print("********************************")
+        print(POINTS)
 
         print("want to repeat?(enter q to exit)")
         data= (input(">"))
